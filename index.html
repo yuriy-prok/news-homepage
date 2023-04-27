@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="flex justify-between items-center max-w-7xl mx-auto mt-24">
+      <a href="#">
+        <img src="./assets/images/logo.svg" alt="logo" />
+      </a>
+      <nav>
+        <div class="hidden h-10 gap-9 md:flex md:space-x-8">
+          <a href="#" class="hover:text-soft-red">Home</a>
+          <a href="#" class="hover:text-soft-red">New</a>
+          <a href="#" class="hover:text-soft-red">Popular</a>
+          <a href="#" class="hover:text-soft-red">Trending</a>
+          <a href="#" class="hover:text-soft-red">Categories</a>
+        </div>
+        <!-- Hamburger Button -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            type="button"
+            class="z-40 block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top bg-white"></span>
+            <span class="hamburger-middle bg-white"></span>
+            <span class="hamburger-bottom bg-white"></span>
+          </button>
+        </div>
+      </nav>
+      <div
+        id="menu"
+        class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black"
+      >
+        <a href="#" class="hover:text-soft-red">Home</a>
+        <a href="#" class="hover:text-soft-red">New</a>
+        <a href="#" class="hover:text-soft-red">Popular</a>
+        <a href="#" class="hover:text-soft-red">Trending</a>
+        <a href="#" class="hover:text-soft-red">Categories</a>
+      </div>
+    </header>
+    <main
+      class="grid grid-cols-3 gap-7 gap-y-16 max-w-7xl mx-4 my-14 md:mx-auto"
+    >
+      <section class="flex flex-col col-span-3 gap-7 md:col-span-2">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./assets/images/image-web-3-mobile.jpg"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcset="./assets/images/image-web-3-desktop.jpg"
+          />
+          <img
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="image description"
+          />
+        </picture>
+        <div class="grid grid-cols-2 gap-[90px]">
+          <h1 class="text-5xl">
+            The Bright Future of <br />
+            Web 3.0?
+          </h1>
+          <div class="flex flex-col justify-between col-span-1 gap-11">
+            <p class="text-dark-grayish-blue">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a
+              href="#"
+              class="w-44 px-7 py-3 text-center text-off-white tracking-[3px] uppercase bg-soft-red hover:bg-very-dark-blue transition duration-300 ease-in-out"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex flex-col col-span-3 gap-5 p-5 bg-very-dark-blue md:col-span-1"
+      >
+        <h1 class="text-[40px] text-soft-orange">New</h1>
+        <div class="flex flex-col justify-between gap-8">
+          <div class="flex flex-col gap-8">
+            <h3 class="text-[18px] font-bold text-off-white">
+              <a
+                href="#"
+                class="hover:text-soft-orange transition duration-300 ease-in-out"
+                >Hydrogen VS Electric Cars</a
+              >
+            </h3>
+            <p class="text-grayish-blue">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <hr />
+          <div class="flex flex-col gap-8">
+            <h3 class="text-[18px] font-bold text-off-white">
+              <a
+                href="#"
+                class="hover:text-soft-orange transition duration-300 ease-in-out"
+                >The Downsides of AI Artistry</a
+              >
+            </h3>
+            <p class="text-grayish-blue">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <hr />
+          <div class="flex flex-col gap-8">
+            <h3 class="text-[18px] font-bold text-off-white">
+              <a
+                href="#"
+                class="hover:text-soft-orange transition duration-300 ease-in-out"
+                >Is VC Funding Drying Up?</a
+              >
+            </h3>
+            <p class="text-grayish-blue">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col col-span-3 gap-6 md:flex-row">
+        <div class="flex gap-6 h-32">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="pc" />
+          <div class="flex flex-col justify-between">
+            <h2 class="text-3xl text-grayish-blue">01</h2>
+            <h3 class="font-bold text-very-dark-blue">
+              <a
+                href="#"
+                class="hover:text-soft-red transition duration-300 ease-in-out"
+                >Reviving Retro PCs</a
+              >
+            </h3>
+            <p class="text-dark-grayish-blue">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-6 h-32">
+          <img src="./assets/images/image-top-laptops.jpg" alt="pc" />
+          <div class="flex flex-col justify-between">
+            <h2 class="text-3xl text-grayish-blue">02</h2>
+            <h3 class="font-bold text-very-dark-blue">
+              <a
+                href="#"
+                class="hover:text-soft-red transition duration-300 ease-in-out"
+                >Top 10 Laptops of 2022</a
+              >
+            </h3>
+            <p class="text-dark-grayish-blue">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-6 h-32">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="pc" />
+          <div class="flex flex-col justify-between">
+            <h2 class="text-3xl text-grayish-blue">03</h2>
+            <h3 class="font-bold text-very-dark-blue">
+              <a
+                href="#"
+                class="hover:text-soft-red transition duration-300 ease-in-out"
+                >The Growth of Gaming</a
+              >
+            </h3>
+            <p class="text-dark-grayish-blue">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl/hub"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/yuriy-prok">Yurii Prokopiev</a>.
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+
+      btn.addEventListener('click', navToggle);
+
+      function navToggle() {
+        btn.classList.toggle('open');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+  </body>
+</html>
